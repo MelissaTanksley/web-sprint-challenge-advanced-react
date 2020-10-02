@@ -43,7 +43,7 @@ const CheckoutForm = (props) => {
         <label>
           Last Name:
           <input
-          placeholder = 'Plants'
+          placeholder = 'Tanksley'
             name="lastName"
             value={values.lastName}
             onChange={handleChanges}

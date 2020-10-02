@@ -30,13 +30,65 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain how to build stateful class components.
 
+Create the class component
+    ```
+        class ExampleComponent extends React.Component {}
+    ```
+Create the constructor and pass in props if the container accepts values from the parent container:
+    ```
+        class ExampleComponent extends React.Component {
+          constructor(props) {}
+        }
+    ```
+Add the super and state in the constructor
+  ```
+        class ExampleComponent extends React.Component {
+          constructor(props) {
+            super(props)
+            this.state = {
+              stateOne: '',
+              stateTwo: []
+            }
+          }
+        }
+  ```
+
+Render and Return
+  ```
+        class ExampleComponent extends React.Component {
+          constructor(props) {
+            super(props)
+            this.state = {
+              stateOne: '',
+              stateTwo: []
+            }
+          }
+          render() {
+            return ()
+          }
+        }
+
 2. Describe the different phases of the component lifecycle.
+
+Mounting: Mounting is when the component prepares everything required such as state and renders for the first time. Methods available during this lifecycle are: _componentWillMount_ and _componentDidMount_.
+
+Updating: Updating is when a change has been made to the state which re-renders the component. Some methods available during this lifecycle are: _shouldComponentUpdate_ (deprecated),  _componentWillUpdate_, and _componentWillUpdate_.
+
+Unmounting: This is where the component gets removed from the DOM. A method available for this phase of the lifecycle is _componentWillUnmount_.
+
 
 3. Demonstrate an understanding of class component lifecycle methods.
 
+See above
+
 4. Define stateful logic.
 
+A stateful logic is a reusable piece of code that interacts or modifies the state --> A custom hook for example.
+
+
 5. Describe how to test a React component with React Testing Library.
+
+You test a React component following the Arrange, Act, and Assert concept. You first arrange what you would need such as rendering a form component, setting a variable for expected values, and making sure to grab every necessary element in the form. Then you act on it by firing events or filling out the input and confirming that everything matches or runs as it's supposed to.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -54,16 +106,16 @@ _Please follow the setup instructions closely so that you can get everything up 
 
 **Basic set up**
 
-- [ ] Create a forked copy of this project
+- [ x] Create a forked copy of this project
 - [ ] Add your team lead as collaborator on Github
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!)
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [ x] Clone your OWN version of the repository (Not Lambda's by mistake!)
+- [ x] Create a new branch: git checkout -b `<firstName-lastName>`.
 
 **Starting the server**
 
-- [ ] Run `npm install` to download dependencies for the server.
-- [ ] Run the server using `npm start`.
-- [ ] Open a new browser tab and navigate to `http://localhost:3333/plants` - if you see a JSON object with plants data, then you know the server is running 👍
+- [ x] Run `npm install` to download dependencies for the server.
+- [ x] Run the server using `npm start`.
+- [ x] Open a new browser tab and navigate to `http://localhost:3333/plants` - if you see a JSON object with plants data, then you know the server is running 👍
 
 **Starting the React app**
 
