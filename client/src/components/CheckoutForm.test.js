@@ -8,19 +8,18 @@ test("form header renders", () => {
     //render app without breaking
     render(<CheckoutForm />)
     expect(screen.getByText(/checkout form/i)).toBeInTheDocument()
-
 });
 
 test("form shows success message on submit with form details", async() => {
     //render app without breaking
     render(<CheckoutForm />)
     //find the inputs
-const firstName = screen.getByPlaceholderText(/melissa/i)
-const lastName = screen.getByPlaceholderText(/tanksley/i)
-const address = screen.getByPlaceholderText(/201 south strand/i)
-const city = screen.getByPlaceholderText(/oceanside/i)
-const state = screen.getByPlaceholderText(/state/i)
-const zip = screen.getByPlaceholderText(/zip/i)
+    const firstName = screen.getByPlaceholderText(/melissa/i)
+    const lastName = screen.getByPlaceholderText(/tanksley/i)
+    const address = screen.getByPlaceholderText(/201 south strand/i)
+    const city = screen.getByPlaceholderText(/oceanside/i)
+    const state = screen.getByPlaceholderText(/state/i)
+    const zip = screen.getByPlaceholderText(/zip/i)
     //fill the inputs
     fireEvent.change(firstName, { target: { value: "Melissa" } });
     fireEvent.change(lastName, { target: { value: "Tanksley" } });
@@ -29,7 +28,7 @@ const zip = screen.getByPlaceholderText(/zip/i)
     fireEvent.change(state, { target: { value: "California" } });
     fireEvent.change(zip, { target: { value: "92054" } });
     //find the button
-const submitBtn = screen.getByRole('button')
+    const submitBtn = screen.getByRole('button')
 
     //click the button
     fireEvent.click(submitBtn)
