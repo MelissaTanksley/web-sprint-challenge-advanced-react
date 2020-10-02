@@ -16,7 +16,7 @@ test("form shows success message on submit with form details", async() => {
     render(<CheckoutForm />)
     //find the inputs
 const firstName = screen.getByPlaceholderText(/melissa/i)
-const lastName = screen.getByPlaceholderText(/plants/i)
+const lastName = screen.getByPlaceholderText(/tanksley/i)
 const address = screen.getByPlaceholderText(/201 south strand/i)
 const city = screen.getByPlaceholderText(/oceanside/i)
 const state = screen.getByPlaceholderText(/state/i)
